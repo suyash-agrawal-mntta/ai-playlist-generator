@@ -41,6 +41,7 @@ app.get("/callback", async (req, res) => {
   const code = req.query.code;
 
   try {
+    // 1️⃣ Get access token
     const response = await axios.post(
       "https://accounts.spotify.com/api/token",
       new URLSearchParams({
@@ -64,7 +65,34 @@ app.get("/callback", async (req, res) => {
 
     const access_token = response.data.access_token;
 
-    // ✅ SEARCH CODE MUST BE HERE
+    // 2️⃣ Get user profile
+    const userResponse = await axios.get("https://api.spotify.com/v1/me", {
+      headers: {
+        Authorization: "Bearer " + access_token,
+      },
+    });
+
+    const userId = userResponse.data.id;
+
+    // 3️⃣ Create playlist
+    const playlistResponse = await axios.post(
+      `https://api.spotify.com/v1/users/${userId}/playlists`,
+      {
+        name: "My AI Playlist",
+        description: "Created using AI 🎧",
+        public: true,
+      },
+      {
+        headers: {
+          Authorization: "Bearer " + access_token,
+          "Content-Type": "application/json",
+        },
+      },
+    );
+
+    console.log("PLAYLIST CREATED:", playlistResponse.data);
+
+    // 4️⃣ Search song (optional, keep for now)
     const searchResponse = await axios.get(
       "https://api.spotify.com/v1/search",
       {
@@ -81,10 +109,11 @@ app.get("/callback", async (req, res) => {
 
     console.log("SONG RESULT:", searchResponse.data.tracks.items[0]);
 
-    res.send("Search done. Check terminal.");
+    // ✅ Send response LAST
+    res.send("Playlist created! Check your Spotify 🎧");
   } catch (error) {
-    console.error(error.response?.data || error);
-    res.send("Error");
+    console.error("FULL ERROR:", error.response?.data || error.message);
+    res.send(error.response?.data || error.message);
   }
 });
 
