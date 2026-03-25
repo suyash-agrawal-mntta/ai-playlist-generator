@@ -1,9 +1,5 @@
 # AI Playlist Generator 🎧
-<<<<<<< HEAD
-this in cursor
-=======
-made changes in github to test
->>>>>>> 488371a4c6b7ccd87c9e9719fa138d4b798a391f
+
 This app generates Spotify playlists using AI prompts.
 
 ## Features
