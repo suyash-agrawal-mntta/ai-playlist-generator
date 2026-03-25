@@ -13,7 +13,7 @@ This app generates Spotify playlists using AI prompts.
 - Express
 - Spotify API
 - OpenAI API
-
+----------------------------------------------------------------
 ## Setup
 1. Clone repo
 2. Add `.env` file:
