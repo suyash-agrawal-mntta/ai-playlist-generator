@@ -1,5 +1,7 @@
 # AI Playlist Generator 🎧
-
+knc skdjcns
+sdcsdc
+SCSCSD
 This app generates Spotify playlists using AI prompts.
 
 ## Features
