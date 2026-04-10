@@ -2,6 +2,12 @@
   <img src="https://img.icons8.com/color/150/000000/spotify--v1.png" alt="Spotify Logo" width="80" />
   <h1>🎧 Music Maestro</h1>
   <p><strong>AI-Powered Sonic Architecture & Playlist Generator</strong></p>
+  
+  <p>
+    <a href="https://music-maestro-lyart.vercel.app/">
+      <img src="https://img.shields.io/badge/Live_Demo-FF0000?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
+    </a>
+  </p>
 
   <p>
     <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" /></a>
@@ -43,6 +49,15 @@ Originally built as a portfolio thesis on third-party API integration and Large 
 ### **External APIs & ML**
 - **Hugging Face Serverless Inference API** (LLM JSON Generation)
 - **Spotify Web API** (OAuth, Catalog Search, Playlist Mutator)
+
+---
+
+## 🚀 Deployment & Infrastructure
+
+Music Maestro is orchestrated across a distributed environment to ensure scalability and persistent state:
+
+*   **Frontend Distribution (Vercel)**: The React client is hosted on Vercel's Edge network, providing optimized delivery and automatic Vite bundling.
+*   **Stateful Orchestrator (Render)**: The Express engine is deployed as a persistent Web Service on Render to handle long-running background API jobs and session preservation.
 
 ---
 
