@@ -9,6 +9,9 @@
     </a>
   </p>
 
+  > [!IMPORTANT]
+  > **🔐 Access Note**: This application is currently in **Spotify API Development Mode**. By default, only authorized testers can log in. If you are a recruiter or developer and want to test the full live functionality with your account, please reach out to me via **[LinkedIn](https://www.linkedin.com/in/suyash-agrawal-mntta/)** to be added as a tester.
+
   <p>
     <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" /></a>
     <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" /></a>
